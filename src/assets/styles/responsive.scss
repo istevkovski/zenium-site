@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+@media only screen and (min-width: 1440px) {
+    #app {
+        margin: 0 7vw;
+    }
+    #section-header {
+        width: calc(100% - 14vw);
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .contact-main-name {
+        p {
+            font-size: $font-l !important;
+        }
+        .secondary {
+            font-size: 17px !important;
+        }
+    }
+}

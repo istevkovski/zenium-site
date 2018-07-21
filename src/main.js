@@ -5,6 +5,8 @@ import App from './App'
 
 import {store} from './store';
 
+import "./assets/styles/responsive.scss";
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

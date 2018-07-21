@@ -59,3 +59,4 @@ export default {
 <style>
   @import "./assets/styles/normalize.scss";
 </style>
+
