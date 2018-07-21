@@ -82,12 +82,20 @@ export default {
             if(this.currSlide > 1) {
                 $('.project').css('left', `${parseInt($('.project').css('left'), 10) + 604}px`);
                 this.currSlide--;
+                $('.btn-slide').prop('disabled', true);
+                setTimeout(function() {
+                    $('.btn-slide').prop('disabled', false);
+                }, 50);
             }
         },
         slideRight: function() {
             if(this.currSlide < this.maxSlides) {
                 $('.project').css('left', `-${604 * this.currSlide}px`);
                 this.currSlide++;
+                $('.btn-slide').prop('disabled', true);
+                setTimeout(function() {
+                    $('.btn-slide').prop('disabled', false);
+                }, 50);
             }
         }
     },
@@ -101,4 +109,3 @@ export default {
 <style lang="scss" scoped>
     @import '../assets/styles/projects.scss';
 </style>
-
