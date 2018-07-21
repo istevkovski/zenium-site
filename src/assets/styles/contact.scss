@@ -1,0 +1,109 @@
+@import './variables.scss';
+
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 768px;
+
+    &-main {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 736px;
+
+        &-left {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            width: 50%;
+            background-color: $znx-pink;
+            padding-top: 343px;
+            padding-right: 307px;
+
+            p {
+                font-family: $font-barlow;
+                font-size: $font-xl;
+                font-weight: 200;
+                color: $znx-white;
+
+                span {
+                    color: $znx-blue;
+                }
+            }
+
+            & .secondary {
+                font-family: $font-barlow;
+                font-size: $font-m;
+                font-weight: 200;
+                color: $znx-white;
+                line-height: 0;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 684.6px;
+                height: 302.34px;
+                bottom: 0;
+                left: 0;
+                background-image: url('../assets/images/mountain-contact.svg');
+                background-repeat: no-repeat;
+            }
+        }
+
+        &-right {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            background-color: $znx-pink;
+            padding-top: 397px;
+            padding-left: 80px;
+
+            p {
+                font-family: $font-barlow;
+                font-size: $font-m;
+                font-weight: 100;
+                color: $znx-white;
+                cursor: default;
+
+                span {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.get-connected {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-family: $font-barlow;
+    font-size: $font-l;
+    font-weight: 300;
+    color: $znx-white;
+    cursor: default;
+
+    span {
+        color: $znx-darkblue;
+    }
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $font-barlow;
+    font-size: 20px;
+    font-weight: 100;
+    color: $znx-white;
+    background-color: $znx-darkblue;
+}

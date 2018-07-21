@@ -1,0 +1,186 @@
+@import './variables.scss';
+
+.projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 768px;
+
+    // Slider settings
+    overflow-x: hidden;
+    // endOf Slider settings
+
+    &-top {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 19.5%;
+        background-color: $znx-darkblue;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    &-middle {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 61%;
+        background-color: $znx-blue;
+        z-index: 0;
+        
+        // Slider settings
+        width: 10000px;
+        // endOf Slider settings
+
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('../assets/images/stripes-projects.svg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+    }
+
+    &-bottom {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 19.5%;
+        background-color: $znx-darkblue;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.projects-bottom {
+    justify-content: center;
+    align-items: center;
+
+    .btn-slide {
+        position: relative;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        margin-right: 80px;
+        border: none;
+        border-radius: 100px;
+        background-color: $znx-blue;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, .35);
+        transition: all .2s;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18.23px;
+            height: 28.23px;
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        &-left::before {
+            background-image: url('../assets/images/angle-left-solid.svg');
+        }
+
+        &-right::before {
+            background-image: url('../assets/images/angle-right-solid.svg');
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.projects-middle {
+    
+    .project {
+        position: relative;
+        display: flex;
+        width: 564px;
+        height: 388px;
+        flex-direction: column;
+        background-color: $znx-darkblue;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: auto 0;
+        margin-left: 40px;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, .5);
+        z-index: 5;
+        transition: all .2s;
+
+        &-top {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 82%;
+            background-color: $znx-blue;
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-bottom {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 18%;
+            background-color: $znx-pink;
+
+            .project-title {
+                position: relative;
+                display: flex;
+                width: 50%;
+                margin: auto 0;
+                margin-left: 40px;
+                cursor: default;
+
+                h2 {
+                    font-family: $font-opensans;
+                    font-size: $font-m;
+                    font-weight: 500;
+                    color: $znx-white;
+                }
+            }
+
+            .project-credits {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-self: flex-end;
+                width: 50%;
+                margin: 0;
+                margin-right: 15px;
+                margin-bottom: 9px;
+
+                span {
+                    cursor: default;
+                    font-family: $font-opensans;
+                    font-size: $font-xxs;
+                    font-weight: 500;
+                    color: $znx-white;
+                    text-align: right;
+                }
+            }
+
+        }
+    }
+}

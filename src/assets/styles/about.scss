@@ -1,0 +1,110 @@
+@import './variables.scss';
+
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 768px;
+    background-color: $znx-pink;
+    font-family: $font-opensans;
+    font-size: $font-m;
+    font-weight: 300;
+
+    &-top {
+        position: relative;
+        height: 45%;
+
+        p {
+            font-weight: 400;
+            // padding: 0 300px;
+            padding: 0px 21vw;
+            padding-top: 110px;
+            color: $znx-darkblue;
+        }
+    }
+
+    &-bottom {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: $znx-darkblue;
+        border-radius: 20px 20px 0 0;
+
+        h2 {
+            font-family: $font-barlow;
+            font-weight: 500;
+            font-size: $font-l;
+            text-align: center;
+            text-transform: uppercase;
+            color: $znx-white;
+            padding-top: 30px;
+        }
+
+        .skills {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin-top: 65.8px;
+            margin-left: 88px;
+            margin-right: 88px;
+
+            .wrapper {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+            }
+
+            .wrapper-solo {
+                flex-direction: row;
+                align-items: flex-end;
+                
+                .skill {
+                    margin-left: 14px;
+
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                }
+
+            }
+            z-index: 1;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 12px;
+
+            img {
+                position: relative;
+                width: 37.78px;
+                height: 37.78px;
+                
+            }
+
+            .skill-bigger {
+                width: 62px;
+            }
+
+            span {
+                font-family: $font-opensans;
+                font-weight: 600;
+                font-size: $font-m;
+                color: white;
+                margin: auto 0;
+                margin-left: 28.8px;
+            }
+        }
+    }
+
+    .about-mountain-background {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 542.88px;
+        z-index: 0;
+    }
+}

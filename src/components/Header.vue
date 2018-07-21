@@ -2,17 +2,30 @@
     <div id="section-header" class="header">
         <h2 class="header-title">Hire a professional</h2>
         <div class="header-nav">
-            <button class="header-nav-link header-nav-active">Home</button>
-            <button class="header-nav-link">About</button>
-            <button class="header-nav-link">Projects</button>
-            <button class="header-nav-link">Contact</button>
+            <button v-on:click="sectionSlide('#section-home'), setNavActive(1)" v-bind:class="{'header-nav-active':navActive == 1}" class="header-nav-link">Home</button>
+            <button v-on:click="sectionSlide('#section-about'), setNavActive(2)" v-bind:class="{'header-nav-active':navActive == 2}" class="header-nav-link">About</button>
+            <button v-on:click="sectionSlide('#section-projects'), setNavActive(3)" v-bind:class="{'header-nav-active':navActive == 3}" class="header-nav-link">Projects</button>
+            <button v-on:click="sectionSlide('#section-contact'), setNavActive(4)" v-bind:class="{'header-nav-active':navActive == 4}" class="header-nav-link">Contact</button>
         </div>
     </div>
 </template>
 
 <script>
+import sharedMethods from '../sharedMethods.js';
+
 export default {
-    name: "Header"
+    name: "Header",
+    data() {
+        return {
+
+        }
+    },
+    computed: {
+        navActive() {
+            return this.$store.state.navActive;
+        }
+    },
+    mixins: [sharedMethods]
 }
 </script>
 
@@ -20,14 +33,18 @@ export default {
     @import "../assets/styles/variables.scss";
 
     .header {
-        // display: flex;
-        display: none;
+        display: flex;
+        // display: none;
         position: fixed;
+        top: -70px;
         width: 100%;
         height: 60px;
         justify-content: space-between;
         padding: 0px 40px;
         background-color: $znx-darkblue;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, .35);
+        transition: all .4s;
+        z-index: 10;
         
         &-title {
             font-family: $font-opensans;
@@ -60,8 +77,12 @@ export default {
         }
 
         &-nav-active {
-            font-weight: 400;
+            font-weight: 600;
             color: $znx-pink;
+        }
+
+        &-show {
+            top: 0;
         }
 
     }
