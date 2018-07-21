@@ -1,7 +1,7 @@
 <template>
     <div id="section-about" class="about">
         <div class="about-top">
-            <p>My name is Ivan Stevkovski. I'm a passionate Front End Developer, as awell as a UX/UI design enthusiast who is always researching in order to stay up-to-date! My work is always following the latest standards.</p>
+            <p>My name is Ivan Stevkovski. I'm a passionate Front End Developer, as awell as a UX/UI design enthusiast who is always researching in order to stay up-to-date! My work always follows the latest standards.</p>
         </div>
         <div class="about-bottom">
             <h2>SKILLS</h2>

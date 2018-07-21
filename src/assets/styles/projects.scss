@@ -7,10 +7,6 @@
     width: 100%;
     height: 768px;
 
-    // Slider settings
-    overflow-x: hidden;
-    // endOf Slider settings
-
     &-top {
         position: relative;
         display: flex;
@@ -28,10 +24,6 @@
         height: 61%;
         background-color: $znx-blue;
         z-index: 0;
-        
-        // Slider settings
-        width: 10000px;
-        // endOf Slider settings
 
 
         &::before {
@@ -44,7 +36,7 @@
             background-image: url('../assets/images/stripes-projects.svg'); 
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: 1;
+            z-index: -1;
         }
     }
 
@@ -124,6 +116,10 @@
         z-index: 5;
         transition: all .2s;
 
+        // slick slider addon
+        margin-top: 40px;
+        margin-right: 40px;
+
         &-top {
             position: relative;
             display: flex;
@@ -158,6 +154,7 @@
                     font-size: $font-m;
                     font-weight: 500;
                     color: $znx-white;
+                    cursor: pointer;
                 }
             }
 

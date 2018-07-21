@@ -20,6 +20,20 @@
             </div>
             <div class="project">
                 <div class="project-top">
+                    <img src="../assets/images/tpist_0.png">
+                </div>
+                <div class="project-bottom">
+                    <div class="project-title">
+                        <h2>tpist_0</h2>
+                    </div>
+                    <div class="project-credits">
+                        <span>Designed by: Ivan Stevkovski</span>
+                        <span>Developed by: Ivan Stevkovski</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-top">
                     <img src="../assets/images/spoof.png">
                 </div>
                 <div class="project-bottom">
@@ -48,6 +62,34 @@
             </div>
             <div class="project">
                 <div class="project-top">
+                    <img src="../assets/images/nexter.png">
+                </div>
+                <div class="project-bottom">
+                    <div class="project-title">
+                        <h2>Nexter</h2>
+                    </div>
+                    <div class="project-credits">
+                        <span>Designed by: Jonas Schmedtmann</span>
+                        <span>Developed by: Ivan Stevkovski</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-top">
+                    <img src="../assets/images/trillo.png">
+                </div>
+                <div class="project-bottom">
+                    <div class="project-title">
+                        <h2>Trillo</h2>
+                    </div>
+                    <div class="project-credits">
+                        <span>Designed by: Jonas Schmedtmann</span>
+                        <span>Developed by: Ivan Stevkovski</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-top">
                     <img src="../assets/images/natours.png">
                 </div>
                 <div class="project-bottom">
@@ -62,8 +104,8 @@
             </div>
         </div>
         <div class="projects-bottom">
-            <button v-on:click="slideLeft()" class="btn-slide btn-slide-left"></button>
-            <button v-on:click="slideRight()" class="btn-slide btn-slide-right"></button>
+            <button class="btn-slide btn-slide-left"></button>
+            <button class="btn-slide btn-slide-right"></button>
         </div>
     </div>
 </template>
@@ -78,34 +120,47 @@ export default {
         }
     },
     methods: {
-        slideLeft: function() {
-            if(this.currSlide > 1) {
-                $('.project').css('left', `${parseInt($('.project').css('left'), 10) + 604}px`);
-                this.currSlide--;
-                $('.btn-slide').prop('disabled', true);
-                setTimeout(function() {
-                    $('.btn-slide').prop('disabled', false);
-                }, 50);
-            }
-        },
-        slideRight: function() {
-            if(this.currSlide < this.maxSlides) {
-                $('.project').css('left', `-${604 * this.currSlide}px`);
-                this.currSlide++;
-                $('.btn-slide').prop('disabled', true);
-                setTimeout(function() {
-                    $('.btn-slide').prop('disabled', false);
-                }, 50);
-            }
-        }
+
     },
     created: function() {
         const vueThis = this;
         // this.maxSlides = $('.project').length;
     }
 }
+
+$(document).ready(function() {
+    $('.btn-slide-left').on('click', function() {
+        $('.slick-prev').click()
+    });
+    $('.btn-slide-right').on('click', function() {
+        $('.slick-next').click()
+    });
+
+    $('.projects-middle').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true
+    });
+
+    $('.project').find('.project-title').find('h2').click(function() {
+        const genThis = this;
+        // console.log($(genThis).hasClass('slick-current'));
+        if($(genThis).parents('.project').hasClass('slick-current') == true){
+            window.open($(genThis).parents('.project').find('img').attr('src'));
+        }
+    });
+});
+
 </script>
 
 <style lang="scss" scoped>
     @import '../assets/styles/projects.scss';
+</style>
+
+<style lang="scss">
+
+    .slick-arrow {
+        display: none !important;
+    }
 </style>
