@@ -141,13 +141,24 @@ $(document).ready(function() {
         slidesToScroll: 1,
         variableWidth: true,
         centerMode: true,
+        mobileFirst: true,
         responsive: [
             {
                 breakpoint: 1050,
                 settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    centerMode: true
+                }
+            },
+            {
+                breakpoint: 325,
+                settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     variableWidth: true,
+                    variableHeight: true,
                     centerMode: true
                 }
             }
