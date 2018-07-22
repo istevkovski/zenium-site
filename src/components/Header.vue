@@ -2,10 +2,10 @@
     <div id="section-header" class="header">
         <h2 class="header-title">Hire a professional</h2>
         <div class="header-nav">
-            <button v-on:click="sectionSlide('#section-home'), setNavActive(1)" v-bind:class="{'header-nav-active':navActive == 1}" class="header-nav-link">Home</button>
-            <button v-on:click="sectionSlide('#section-about'), setNavActive(2)" v-bind:class="{'header-nav-active':navActive == 2}" class="header-nav-link">About</button>
-            <button v-on:click="sectionSlide('#section-projects'), setNavActive(3)" v-bind:class="{'header-nav-active':navActive == 3}" class="header-nav-link">Projects</button>
-            <button v-on:click="sectionSlide('#section-contact'), setNavActive(4)" v-bind:class="{'header-nav-active':navActive == 4}" class="header-nav-link">Contact</button>
+            <button v-on:click="sectionSlide('#section-home'), setNavActive(1)" v-bind:class="{'header-nav-active':navActive == 1}" class="header-nav-link"><span>Home</span></button>
+            <button v-on:click="sectionSlide('#section-about'), setNavActive(2)" v-bind:class="{'header-nav-active':navActive == 2}" class="header-nav-link"><span>About</span></button>
+            <button v-on:click="sectionSlide('#section-projects'), setNavActive(3)" v-bind:class="{'header-nav-active':navActive == 3}" class="header-nav-link"><span>Projects</span></button>
+            <button v-on:click="sectionSlide('#section-contact'), setNavActive(4)" v-bind:class="{'header-nav-active':navActive == 4}" class="header-nav-link"><span>Contact</span></button>
         </div>
     </div>
 </template>
@@ -66,6 +66,10 @@ export default {
             border: none;
             text-transform: uppercase;
             transition: all .25s;
+
+            span {
+                cursor: pointer;
+            }
 
             &:last-of-type {
                 margin-right: 0;

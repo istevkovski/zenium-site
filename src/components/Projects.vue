@@ -140,7 +140,18 @@ $(document).ready(function() {
         slidesToShow: 2,
         slidesToScroll: 1,
         variableWidth: true,
-        centerMode: true
+        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 1050,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    centerMode: true
+                }
+            }
+        ]
     });
 
     $('.project').find('.project-title').find('h2').click(function() {

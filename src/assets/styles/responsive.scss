@@ -10,6 +10,98 @@
 }
 
 @media only screen and (max-width: 1050px) {
+    #header-home {
+        padding: 0;
+        .header-left {
+            display: none;
+        }
+        .header-right {
+            margin: auto;
+        }
+        .nav-link {
+            width: 40px;
+            height: 40px;
+            background-color: #404b69;
+            border-radius: 50px;
+
+            span {
+                visibility: hidden;
+            }
+        }
+        .nav-active {
+            color: white;
+            font-weight: 600;
+            width: 100px;
+            background-color: #F73859;
+
+            span {
+                visibility: visible !important;
+                &:hover {
+                    color: $znx-white;
+                }
+            }
+        }
+    }
+
+    #section-header {
+        padding: 0;
+        .header-title {
+            display: none;
+        }
+        .header-nav {
+            margin: auto auto;
+        }
+        .header-nav-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #404b69;
+            margin: 10px;
+            span {
+                visibility: hidden;
+            }
+        }
+        .header-nav-active {
+            color: white;
+            font-weight: 600;
+            width: 100px !important;
+            background-color: #F73859 !important;
+            span {
+                visibility: visible;
+            }
+        }
+    }
+
+    #section-home {
+        overflow-x: hidden;
+
+        .home-main {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .main-msg {
+            font-size: 28px;
+            padding-top: 100px;
+        }
+        .btn {
+            width: 180px;
+            height: 50px;
+            font-size: 18px;
+        }
+        .moto-msg {
+            bottom: 5px;
+            right: 5px;
+        }
+    }
+
+    #section-projects {
+        .project {
+            width: 625px;
+            height: 100%;
+            margin: 35px;
+        }
+    }
+
     .contact-main-name {
         p {
             font-size: $font-l !important;
@@ -18,4 +110,51 @@
             font-size: 17px !important;
         }
     }
+
+    #section-about {
+        overflow-x: hidden;
+        height: auto !important;
+    }
+
+    .about-top {
+        p {
+            font-size: 17px !important;
+            text-align: center !important;
+            padding: 0 10px !important;
+            padding-top: 60px !important;
+        }
+    }
+
+    .about-bottom {
+        margin-top: 60px !important;
+        height: auto !important;
+
+        h2 {
+            font-size: 28px !important;
+        }
+
+    }
+
+    .skills {
+        flex-wrap: wrap !important;
+        margin: 0px auto !important;
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .wrapper {
+        width: 45% !important;
+
+        .skill {
+            img {
+                width: 37.78px !important;
+                height: 26.78px !important;
+            }
+
+            span {
+                font-size: 17px !important;
+            }
+        }
+    }
+
 }

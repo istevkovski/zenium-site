@@ -6,10 +6,10 @@
                 <p>Front End Developer</p>
             </div>
             <div class="header-right">
-                <button v-bind:class="{'nav-active': navActive == 1}" class="nav-link"><span v-on:click="sectionSlide('#section-home'), setNavActive(1)">Home</span></button>
-                <button v-bind:class="{'nav-active': navActive == 2}" class="nav-link"><span v-on:click="sectionSlide('#section-about'), setNavActive(2)">About</span></button>
-                <button v-bind:class="{'nav-active': navActive == 3}" class="nav-link"><span v-on:click="sectionSlide('#section-projects'), setNavActive(3)">Projects</span></button>
-                <button v-bind:class="{'nav-active': navActive == 4}" class="nav-link"><span v-on:click="sectionSlide('#section-contact'), setNavActive(4)">Contact</span></button>
+                <button v-on:click="sectionSlide('#section-home'), setNavActive(1)" v-bind:class="{'nav-active': navActive == 1}" class="nav-link"><span>Home</span></button>
+                <button v-on:click="sectionSlide('#section-about'), setNavActive(2)" v-bind:class="{'nav-active': navActive == 2}" class="nav-link"><span>About</span></button>
+                <button v-on:click="sectionSlide('#section-projects'), setNavActive(3)" v-bind:class="{'nav-active': navActive == 3}" class="nav-link"><span>Projects</span></button>
+                <button v-on:click="sectionSlide('#section-contact'), setNavActive(4)" v-bind:class="{'nav-active': navActive == 4}" class="nav-link"><span>Contact</span></button>
             </div>
         </div>
         <div class="home-main">
